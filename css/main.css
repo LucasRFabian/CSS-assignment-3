@@ -8,13 +8,13 @@ html {
     box-sizing: inherit; /* keep */
 }
 body {
-    font-family: sans-serif;
+    font-family: "Bitter", "Times New Roman", serif;
     background: #5598b2; /* keep */
     color: #333; /* keep */
     margin: 0; /* keep */
 }
 h1, h2 {
-    font-family: serif;
+    font-family: "Inter Tight", "Trebuchet MS", sans-serif;
 }
 #tagline {
     font-style: italic;
@@ -38,10 +38,14 @@ img {
     margin: auto; /* keep */
     display: grid; /* keep */
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(6, auto);
     grid-template-areas:
-        "header arial georgia pairing bobwhite-quail"
-        "readability line-length helvetica typeface footer";
+    "header header header header header"
+    "pairing pairing pairing arial georgia"
+    "bobwhite-quail bobwhite-quail readability readability readability"
+    "bobwhite-quail bobwhite-quail line-length line-length line-length"
+    "typeface typeface typeface helvetica helvetica"
+    "footer footer footer footer footer";
 }
 
 /* all grid items -
@@ -50,10 +54,21 @@ img {
     You may add lines as needed. Do not change any line marked -keep-
     */
 
+/*Header*/
 header {
     grid-area: header; /* keep */
     background: #fff; /* keep */
+    text-align: center;
+    padding: 1rem 0.5rem 3rem 0.5rem;
 }
+header h1 {
+    font-size: 3.2rem;
+}
+header p {
+    font-size: 2rem;
+}
+
+/*Row 2*/
 #arial {
     grid-area: arial; /* keep */
     background: #a8e8ff; /* keep */
@@ -62,34 +77,75 @@ header {
     grid-area: georgia; /* keep */
     background: #a8e8ff; /* keep */
 }
+#arial, #georgia {
+    padding: 4rem 1rem 1rem 0;
+}
 #pairing {
     grid-area: pairing; /* keep */
     background: #a8e8ff; /* keep */
+    padding: 4rem;
+    font-size: 1.55rem;
+    margin:0
 }
+
+/*Row 3*/
 #bobwhite-quail {
     grid-area: bobwhite-quail; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 4rem 0 3rem 4rem;
 }
 #readability {
     grid-area: readability; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 3.5rem 5rem 0 2rem;
 }
+
 #line-length {
     grid-area: line-length; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 0 5rem 0 2rem;
 }
+#readability h2, #line-length h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+#readability p, #line-length p {
+    font-size: 1.15rem;
+    line-height: 1.45rem;
+}
+
+/*Row 4*/
 #helvetica {
     grid-area: helvetica; /* keep */
     background: #fff; /* keep */
+    margin: 4.5rem 3rem 27.2rem 0;
+    padding: 3rem;
 }
 #typeface {
     grid-area: typeface; /* keep */
     color: #d2f4ff; /* keep */
     background: #5598b2; /* keep */
+    padding: 3.6rem 2rem 4rem 4rem;
+    text-shadow: 0.1rem 0.1rem #333;
 }
+#typeface h2 {
+    font-size: 2.1rem;
+    margin: 0;
+}
+#typeface p {
+    font-size: 1.33rem;
+    margin-top: 0;
+    padding-top: 0.5rem;
+    line-height: 1.5rem;
+}
+
+/*Footer*/
 footer {
     grid-area: footer; /* keep */
     background: #b2988a; /* keep */
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
 }
 
 /* end of all 10 grid items */
