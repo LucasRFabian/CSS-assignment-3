@@ -161,3 +161,48 @@ a:hover {
 }
 
 /* media queries below - only 1 is needed */
+@media screen and (max-width: 850px) {
+    #container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, auto);
+        grid-template-areas:
+        "header header"
+        "arial georgia"
+        "pairing pairing"
+        "bobwhite-quail bobwhite-quail"
+        "readability readability"
+        "line-length line-length"
+        "helvetica helvetica"
+        "typeface typeface"
+        "footer footer";
+    }
+    header img {
+        display: none;
+    }
+    #arial {
+        padding: 1rem 0.5rem 1rem 1rem;
+    }
+    #georgia {
+        padding: 1rem 1rem 1rem 0.5rem;
+    }
+    #pairing {
+        padding: 1rem;
+        padding-bottom: 2rem;
+    }
+    #bobwhite-quail {
+        padding: 1rem;
+    }
+    #readability, #line-length {
+        padding: 0 1rem 2rem 1rem;
+    }
+    #helvetica {
+        margin: 0;
+        padding: 1rem;
+    }
+    #typeface {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    footer{
+        text-align: left;
+    }
+}
